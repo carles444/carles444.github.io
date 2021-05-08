@@ -8,11 +8,23 @@
 #page_title{
     text-align: center;
     position: relative;
-    text-shadow: 3in;
+    display: block;
+    margin: 5%;
+    font-size: xxx-large;
+    font-family: system-ui;
 }
 
-#recommender_button{
-    background-color: #4CAF50;
+button:hover{
+    background-color: #D2691E;
+}
+
+button{
+    background-color: #FF7F50;
     padding: 1%;
-    margin: 3%
+    margin: 3%;
+    display: block;
+    margin-left: 21%;
+    margin-right: 21%;
+    font-family: system-ui;
+    border-radius: 5px;
 }
