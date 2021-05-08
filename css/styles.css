@@ -1,0 +1,18 @@
+
+#layout{
+    display:grid;
+    grid-template-areas:'layout_title'
+                        'layout_recommender';
+}
+
+#page_title{
+    text-align: center;
+    position: relative;
+    text-shadow: 3in;
+}
+
+#recommender_button{
+    background-color: #4CAF50;
+    padding: 1%;
+    margin: 3%
+}
