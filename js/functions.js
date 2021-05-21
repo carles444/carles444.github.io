@@ -3,17 +3,27 @@ var webUrl = 'https://carles444.github.io/'
 var clientID = 'f3864cc367934305aac6f0bbf785b377';
 var clietnSecrt = 'ddbba0b3368f47ae8197e13e26c556b9';
 var Token = null;
-var option_basic_recom = '<button id="recommender_button" style="grid-area:layout_recommender" onclick="request_option(`basic`)"> BASIC RECOMMENDER </button>' 
-var create_list_by_artists = '<button id="recommender_button" style="grid-area:layout_recommender" onclick="request_option(`artists`)"> ARTISTS RECOMMENDER </button>' 
-
+var server_url = 'https://europe-west1-graphite-hook-310809.cloudfunctions.net/RecoMusic';
 
 currentUrl = window.location.href;
 if(currentUrl.includes('access_token')){
     pos = currentUrl.indexOf('=')
     Token = currentUrl.slice(pos+1, currentUrl.length)
-    el = document.getElementById('recommender_options')
-    el.innerHTML = option_basic_recom + create_list_by_artists;
-    
+    document.getElementById('auth_but').textContent = 'GET ACCESS'
+    document.getElementById('basic_rec').style.display = 'block'
+    document.getElementById('artists_rec').style.display = 'block'
+
+}
+else{
+    document.getElementById('auth_but').textContent = 'GET ACCESS'
+    document.getElementById('basic_rec').style.display = 'none'
+    document.getElementById('artists_rec').style.display = 'none'
+}
+
+function ajax_request_jquery(element, params) {
+    $.ajax({type: "GET", url: server_url + params, success:
+            function (result) { $('#'+element).html(result);}
+    });
 }
 
 function authorization(){
@@ -22,4 +32,9 @@ function authorization(){
     window.location.href = 'https://accounts.spotify.com/authorize?'+params+scopes;
     console.log(params+scopes);
 
+}
+
+function request_option(option_name){
+    params = '?token='+token+'&option='+option_name;
+    ajax_request_jquery('response', params);
 }

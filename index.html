@@ -14,9 +14,12 @@
 <body>
     <div id="layout">
         <title id="page_title" style="grid-area:layout_title" href='https://carles444.github.io/'>RecoMusic</title>
-        <div id='recommender_options'>
-            <button id="recommender_button" style="grid-area:layout_recommender" onclick="authorization()"> RECOMMENDER </button> 
-        </div>
+        <button id="auth_but"  onclick="authorization()"> RECOMMENDER </button> 
+        <button id="basic_rec" onclick="request_option(`basic`)"> BASIC RECOMMENDER </button>
+        <button id="artists_rec" onclick="request_option(`artists`)"> ARTISTS RECOMMENDER </button>
+    </div>
+    <div id="response">
+    
     </div>
 </body>
 </html>
