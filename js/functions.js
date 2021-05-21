@@ -1,5 +1,5 @@
 
-var webUrl = 'https://carles444.github.io/'
+var webUrl = 'https://carles444.github.io/';
 var clientID = 'f3864cc367934305aac6f0bbf785b377';
 var clietnSecrt = 'ddbba0b3368f47ae8197e13e26c556b9';
 var Token = null;
@@ -37,6 +37,6 @@ function authorization(){
 }
 
 function request_option(option_name){
-    params = '?token='+token+'&option='+option_name;
+    params = '?token='+Token+'&option='+option_name;
     ajax_request_jquery('response', params);
 }
