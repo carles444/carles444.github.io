@@ -6,18 +6,20 @@ var Token = null;
 var server_url = 'https://europe-west1-graphite-hook-310809.cloudfunctions.net/RecoMusic';
 
 currentUrl = window.location.href;
-if(currentUrl.includes('access_token')){
-    pos = currentUrl.indexOf('=')
-    Token = currentUrl.slice(pos+1, currentUrl.length)
-    document.getElementById('auth_but').textContent = 'GET ACCESS'
-    document.getElementById('basic_rec').style.display = 'block'
-    document.getElementById('artists_rec').style.display = 'block'
 
-}
-else{
-    document.getElementById('auth_but').textContent = 'GET ACCESS'
-    document.getElementById('basic_rec').style.display = 'none'
-    document.getElementById('artists_rec').style.display = 'none'
+function init(){
+    if(currentUrl.includes('access_token')){
+        pos = currentUrl.indexOf('=')
+        Token = currentUrl.slice(pos+1, currentUrl.length)
+        document.getElementById('auth_but').textContent = 'REFRESH SESSION'
+        document.getElementById('basic_rec').style.display = 'block'
+        document.getElementById('artists_rec').style.display = 'block'
+
+    } else{
+        document.getElementById('auth_but').textContent = 'GET ACCESS'
+        document.getElementById('basic_rec').style.display = 'none'
+        document.getElementById('artists_rec').style.display = 'none'
+    }
 }
 
 function ajax_request_jquery(element, params) {
