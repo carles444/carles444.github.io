@@ -22,7 +22,7 @@ function init(){
 }
 
 function ajax_request_jquery(element, params, input_data) {
-    $.ajax({type: "POST", url: server_url + params,
+    $.ajax({type: "GET", url: server_url + params,
     dataType: "json", contentType: "application/json", success:
             function (result) { $('#'+element).html(result);},
     data: input_data
