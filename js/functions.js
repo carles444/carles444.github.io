@@ -44,9 +44,9 @@ function request_option(option_name, input_data){
 
 function basic_recom(){
     bform = document.getElementById('basic_form');
-    artist_name = [bform.elements['playlist_name'], bform.elements['artist_name']];
+    artist_name = [document.getElementById('playlist_name').value, document.getElementById('artist_name').value];
     json_input = JSON.stringify(artist_name);
-    alert(document.getElementById('artist_name').value);
+    alert(json_input);
     request_option('basic', json_input);
 }
 
