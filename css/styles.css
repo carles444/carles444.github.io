@@ -18,7 +18,7 @@ button:hover{
     background-color: #D2691E;
 }
 
-#basic_rec, #artists_rec{
+#basic_rec, #artists_rec, #basic_form{
     display: none;
 }
 

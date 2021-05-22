@@ -1,7 +1,7 @@
 
 var webUrl = 'https://carles444.github.io/';
 var clientID = 'f3864cc367934305aac6f0bbf785b377';
-var clietnSecrt = 'ddbba0b3368f47ae8197e13e26c556b9';
+var clietnSecret = 'ddbba0b3368f47ae8197e13e26c556b9';
 var Token = null;
 var server_url = 'https://europe-west1-graphite-hook-310809.cloudfunctions.net/RecoMusic';
 currentUrl = window.location.href;
@@ -21,9 +21,11 @@ function init(){
     }
 }
 
-function ajax_request_jquery(element, params) {
-    $.ajax({type: "GET", url: server_url + params, success:
-            function (result) { $('#'+element).html(result);}
+function ajax_request_jquery(element, params, input_data) {
+    $.ajax({type: "POST", url: server_url + params,
+    dataType: "json", contentType: "application/json", success:
+            function (result) { $('#'+element).html(result);},
+    data: input_data
     });
 }
 
@@ -35,7 +37,20 @@ function authorization(){
 
 }
 
-function request_option(option_name){
+function request_option(option_name, input_data){
     params = '?token='+Token+'&option='+option_name;
-    ajax_request_jquery('response', params);
+    ajax_request_jquery('response', params, input_data);
+}
+
+
+function basic_recom(){
+    bform = document.getElementById('basic_form');
+    artist_name = [bform.elements['playlist_name'], bform.elements['artist_name']];
+    json_input = JSON.stringify(artist_name);
+    request_option('basic', json_input);
+}
+
+
+function show_form(form_id){
+    document.getElementById(form_id).style.display = 'block';
 }
