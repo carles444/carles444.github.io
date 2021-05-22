@@ -22,7 +22,8 @@ function init(){
 }
 
 function ajax_request_jquery(element, params) {
-    $.ajax({type: "GET", url: server_url + params, headers: {'Access-Control-Allow-Origin': '*'},success:
+    $.ajax({type: "GET", url: server_url + params,
+    beforeSend: function(xhr) {xhr.setRequestHeader('Access-Control-Allow-Origin', '*')},success:
             function (result) { $('#'+element).html(result);}
     });
 }
