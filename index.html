@@ -16,7 +16,7 @@
         <title id="page_title" style="grid-area:layout_title" href='https://carles444.github.io/'>RecoMusic</title>
         <button id="auth_but"  onclick="authorization()"> GET ACCESS </button> 
         <button id="basic_rec" onclick="show_form(`basic_form`)"> BASIC RECOMMENDER </button>
-        <form action="basic_recom()"id="basic_form">
+        <form onsubmit="basic_recom()"id="basic_form">
             <label for="artist_name"> Artist Name </label>
             <input type="text" id="artist_name">
             <label for="playlist_name"> Playlist Name </label>
