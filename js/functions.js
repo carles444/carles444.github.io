@@ -23,9 +23,8 @@ function init(){
 
 function ajax_request_jquery(element, params, input_data) {
     $.ajax({type: "GET", url: server_url + params,
-    dataType: "json", contentType: "application/json", success:
-            function (result) { $('#'+element).html(result);},
-    data: input_data
+    dataType: "json", contentType: "application/json", data: input_data, success:
+            function (result) { $('#'+element).html(result);}
     });
 }
 
@@ -47,6 +46,7 @@ function basic_recom(){
     bform = document.getElementById('basic_form');
     artist_name = [bform.elements['playlist_name'], bform.elements['artist_name']];
     json_input = JSON.stringify(artist_name);
+    alert(json_input);
     request_option('basic', json_input);
 }
 
