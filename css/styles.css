@@ -56,3 +56,8 @@ button.submit {
 input {
     margin: 0.5%;
  }
+
+ #response {
+     margin: 5%;
+     text-align: center;
+ }
