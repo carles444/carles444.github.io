@@ -1,6 +1,7 @@
 body{
+    height: 100%;
     color: white;
-    background-image: url("images/background.jpg");
+    background: linear-gradient(to bottom, black, gray);
 }
 
 #layout{
