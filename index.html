@@ -14,18 +14,18 @@
 <body>
     <div id="layout">
         <title id="page_title" style="grid-area:layout_title" href='https://carles444.github.io/'>RecoMusic</title>
-        <button id="auth_but"  onclick="authorization()"> GET ACCESS </button> 
-        <button id="basic_rec" onclick="show_form(`basic_form`)"> BASIC RECOMMENDER </button>
+        <button class="options" id="auth_but"  onclick="authorization()"> GET ACCESS </button> 
+        <button class="options" id="basic_rec" onclick="show_form(`basic_form`)"> BASIC RECOMMENDER </button>
         
-        <div id="basic_form">
+        <div id="basic_form" class="form">
             <label for="artist_name"> Artist Name </label>
             <input type="text" id="artist_name">
             <label for="playlist_name"> Playlist Name </label>
             <input type="text" id="playlist_name">
-            <button onclick='basic_recom()'>SUBMIT</button>
+            <button class='submit' onclick='basic_recom()'>SUBMIT</button>
         </div>
         
-        <button id="artists_rec" onclick="request_hello_world()"> ARTISTS RECOMMENDER </button>
+        <button class="options" id="artists_rec" onclick="request_hello_world()"> ARTISTS RECOMMENDER </button>
     </div>
     
     <div id="response">
