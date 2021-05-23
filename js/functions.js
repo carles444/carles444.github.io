@@ -31,7 +31,7 @@ function ajax_request_jquery(element, params, input_data) {
 
 function request_hello_world() {
     $.ajax({
-        method: "post",
+        method: "POST",
         dataType: "json",
         url: server_url + '?token=' + Token, 
         data: {Names: 'Bad Bunny'},
