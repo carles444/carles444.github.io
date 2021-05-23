@@ -22,11 +22,11 @@ function init(){
 }
 
 function ajax_request_jquery(element, params, input_data) {
-    $.ajax({type: "post", 
+    $.ajax({type: "POST", 
             url: server_url + params,
-            dataType: "json", contentType: "application/json", 
+            contentType: "application/json", 
             data: input_data,
-            success: function (result) { $('#'+element).html(result.msg);}
+            success: function (result) { $('#'+element).html(result);}
     });
 }
 
@@ -55,9 +55,9 @@ function request_option(option_name, input_data){
 
 
 function basic_recom(){
-    bform = document.getElementById('basic_form');
-    artist_name = [document.getElementById('playlist_name').value, document.getElementById('artist_name').value];
-    json_input = JSON.stringify(artist_name);
+    artist_name = document.getElementById('artist_name').value;
+    playlist_name = document.getElementById('playlist_name').value;
+    json_input = JSON.stringify({'Names': artist_name, 'playlist_name': playlist_name});
     request_option('basic', json_input);
 }
 
