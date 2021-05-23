@@ -34,7 +34,7 @@ function request_hello_world() {
         type: 'POST',
         contentType: "application/json", 
         url: server_url + '?token=' + Token, 
-        data: {'Names': 'Bad Bunny'},
+        data: {Names: 'Bad Bunny'},
         success: function(data) { alert(data); }
     });
 }
