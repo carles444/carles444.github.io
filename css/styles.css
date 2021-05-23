@@ -27,12 +27,12 @@ button:hover{
 }
 
 button{
-    background-color: #FF7F50;
+    background-color: green;
     padding: 1%;
     margin: 3%;
     display: block;
     margin-left: 21%;
     margin-right: 21%;
     font-family: system-ui;
-    border-radius: 5px;
+    border-radius: 25px;
 }
