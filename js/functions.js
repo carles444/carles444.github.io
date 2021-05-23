@@ -31,11 +31,10 @@ function ajax_request_jquery(element, params, input_data) {
 
 function request_hello_world() {
     $.ajax({
-        method: 'POST',
-        crossDomain: true,
-        dataType: "json", 
-        url: server_url, 
-        data: {Names: 'Bad Bunny'},
+        type: 'POST',
+        contentType: "application/json", 
+        url: server_url + '?token=' + Token, 
+        data: {'Names': 'Bad Bunny'},
         success: function(data) { alert(data); }
     });
 }
