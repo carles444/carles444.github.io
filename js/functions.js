@@ -68,7 +68,7 @@ function show_hide_form(content_id){
     if(document.getElementById(content_id).style.display == 'block')
         document.getElementById(content_id).style.display = 'none';
     else
-        document.getElementById(content_id).style.display = 'block'
+        document.getElementById(content_id).style.display = 'block';
 }
 
 
