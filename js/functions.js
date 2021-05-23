@@ -21,9 +21,6 @@ function init(){
     }
 }
 
-function hide_content(content_id){
-    document.getElementById(content_id).style.display = 'none';
-}
 
 function ajax_request_jquery(element, params, input_data) {
     $.ajax({type: "POST", 
@@ -63,11 +60,15 @@ function basic_recom(){
     playlist_name = document.getElementById('playlist_name').value;
     json_input = JSON.stringify({'Names': artist_name, 'playlist_name': playlist_name});
     request_option('basic', json_input);
-    hide_content('basic_form');
+    show_hide_form('basic_form');
 }
 
 
-function show_content(content_id){
-    document.getElementById(content_id).style.display = 'block';
+function show_hide_form(content_id){
+    if(document.getElementById(content_id).style.display == 'block')
+        document.getElementById(content_id).style.display = 'none';
+    else
+        document.getElementById(content_id).style.display = 'block'
 }
+
 
