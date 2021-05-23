@@ -1,8 +1,9 @@
 body{
     color: white;
-    background: linear-gradient(to bottom, black, white);
 }
-
+html{
+    background: linear-gradient(to bottom, black, gray);
+}
 #layout{
     display:grid;
     grid-template-areas:'layout_title'
