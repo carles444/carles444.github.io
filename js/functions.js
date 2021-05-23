@@ -32,10 +32,9 @@ function ajax_request_jquery(element, params, input_data) {
 function request_hello_world() {
     $.ajax({
         type: 'POST',
-        dataType: "json",
         contentType: "application/json", 
         url: server_url + '?token=' + Token, 
-        data: JSON.stringify({'Names': 'Bad Bunny'}),
+        data: {'Names': 'Bad Bunny'},
         success: function(data) { alert(data); }
     });
 }
