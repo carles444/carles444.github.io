@@ -34,7 +34,7 @@ function request_hello_world() {
         method: 'POST',
         crossDomain: true,
         dataType: "json", 
-        url: server_url + '?token=' + Token, 
+        url: server_url, 
         data: {Names: 'Bad Bunny'},
         success: function(data) { alert(data); }
     });
