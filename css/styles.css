@@ -48,8 +48,11 @@ button.submit {
     background-color: white;
     padding: 0.5%;
     margin: 0 auto;
-    
     display: block;
     font-family: system-ui;
     border-radius: 8px;
 }
+
+input {
+    margin: 0.5%;
+ }
