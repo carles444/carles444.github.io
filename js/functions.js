@@ -29,6 +29,13 @@ function ajax_request_jquery(element, params, input_data) {
     });
 }
 
+function request_hello_world() {
+    $.ajax({
+        url: server_url, 
+        success: function(data) { alert(data); }
+    });
+}
+
 function authorization(){
     params = 'client_id='+clientID+'&response_type=token&redirect_uri='+webUrl;
     scopes = '&scope=playlist-modify-public user-top-read';
