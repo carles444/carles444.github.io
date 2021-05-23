@@ -68,7 +68,6 @@ function basic_recom(){
 
 
 function show_content(content_id){
-    hide_content('response'); //amaga la resposta rebuda anteriorment quan es mostra nou contingut
     document.getElementById(content_id).style.display = 'block';
 }
 
