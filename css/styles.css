@@ -47,7 +47,8 @@ button.options {
 button.submit {
     background-color: white;
     padding: 0.5%;
-    margin: 1%;
+    margin: 0 auto;
+    
     display: block;
     font-family: system-ui;
     border-radius: 8px;
