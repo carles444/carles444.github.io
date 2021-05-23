@@ -1,6 +1,6 @@
 body{
     color: white;
-    background: rgb(121, 116, 116);
+    background-image: url("images/background.jpg");
 }
 
 #layout{
