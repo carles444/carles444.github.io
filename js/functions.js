@@ -63,6 +63,10 @@ function basic_recom(){
     show_hide_form('basic_form');
 }
 
+function graphics_recom(){
+    request_option('graphics', null);
+    show_hide_form('graphics_form');
+}
 
 function show_hide_form(content_id){
     if(document.getElementById(content_id).style.display == 'block')
