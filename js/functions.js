@@ -66,6 +66,7 @@ function basic_recom(){
 function graphics_recom(){
     playlist_name = document.getElementById('playlist_name_graphics').value;
     json_input = JSON.stringify({'playlist_name': playlist_name});
+    alert(json_input);
     request_option('graphics', json_input);
     show_hide_form('graphics_form');
 }
