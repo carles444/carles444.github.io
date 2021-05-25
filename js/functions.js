@@ -57,14 +57,16 @@ function request_option(option_name, input_data){
 
 function basic_recom(){
     artist_name = document.getElementById('artist_name').value;
-    playlist_name = document.getElementById('playlist_name').value;
+    playlist_name = document.getElementById('playlist_name_basic').value;
     json_input = JSON.stringify({'Names': artist_name, 'playlist_name': playlist_name});
     request_option('basic', json_input);
     show_hide_form('basic_form');
 }
 
 function graphics_recom(){
-    request_option('graphics', null);
+    playlist_name = document.getElementById('playlist_name_graphics').value;
+    json_input = JSON.stringify({'playlist_name': playlist_name});
+    request_option('graphics', json_input);
     show_hide_form('graphics_form');
 }
 
