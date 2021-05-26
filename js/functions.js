@@ -71,7 +71,7 @@ function would_like(){
     track_name = document.getElementById('track_name_would').value;
     json_input = JSON.stringify({'track_name': track_name});
     request_option('would_like', json_input);
-    show_hide_form('would_form');
+    show_hide_form('would_like_form');
 }
 
 function graphics_recom(){
