@@ -29,7 +29,7 @@ button.options:hover{
     background-color: #14964a;
 }
 
-#basic_rec, #artists_rec, #basic_form, #graphics_form{
+#basic_rec, #artists_rec, #basic_form, #graphics_form, #would_form, #complete_form{
     display: none;
 }
 

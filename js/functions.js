@@ -63,11 +63,27 @@ function basic_recom(){
     show_hide_form('basic_form');
 }
 
+function would_like(){
+    track_name = document.getElementById('track_name_would').value;
+    json_input = JSON.stringify({'track_name': track_name});
+    request_option('would_like', json_input);
+    show_hide_form('would_form');
+}
+
 function graphics_recom(){
     playlist_name = document.getElementById('playlist_name_graphics').value;
     json_input = JSON.stringify({'playlist_name': playlist_name});
     request_option('graphics', json_input);
     show_hide_form('graphics_form');
+}
+
+function complete_recom(){
+    data = document.getElementById('data_complete').value;
+    playlist_name = document.getElementById('playlist_name_complete').value;
+    data_type = document.getElementById('complete_select').value;
+    json_input = JSON.stringify({'Data': data, 'playlist_name': playlist_name, 'data_type': data_type});
+    request_option('complete', json_input);
+    show_hide_form('complete_form');
 }
 
 function show_hide_form(content_id){

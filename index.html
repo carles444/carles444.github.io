@@ -16,14 +16,21 @@
     <div id="layout">
         <title id="page_title" style="grid-area:layout_title" href='https://carles444.github.io/'>RecoMusic</title>
         <button class="options" id="auth_but"  onclick="authorization()"> GET ACCESS </button> 
-        <button class="options" id="basic_rec" onclick="show_hide_form(`basic_form`)"> BASIC RECOMMENDER </button>
         
-        <div id="basic_form" class="form">
-            <label for="artist_name" > Artists Names (ex: artist1, artist2 ...)</label> <br> 
-            <input type="text" id="artist_name"> <br> 
-            <label for="playlist_name_basic"> Playlist Name </label> <br> 
-            <input type="text" id="playlist_name_basic"> <br> 
-            <button class='submit' onclick='basic_recom()'>SUBMIT</button>
+        <button class="options" id="basic_rec" onclick="show_hide_form(`complete_form`)"> BASIC RECOMMENDER </button>
+        
+        <div id="complete_form" class="form">
+            <label for="option_complete">Choose an option:</label>
+            <select name="cars" id="cars">
+                <option value="genre">Genre</option>
+                <option value="artists">Artists</option>
+                <option value="songs">Songs</option>
+            </select>
+            <label for="data_complete"> Input </label> <br> 
+            <input type="text" id="data_complete" placeholder='(artist1, artist2... / genre1, genre2... / song1, song2...)'>  <br> 
+            <label for="playlist_name_complete"> Playlist Name </label> <br> 
+            <input type="text" id="playlist_name_complete"> <br> 
+            <button class='submit' onclick='complete_recom()'>CREATE PLAYLIST</button>
         </div>
         
         <button class="options" id="artists_rec" onclick="show_hide_form(`graphics_form`)"> SHOW PLAYLIST GRAPHICS </button>
@@ -33,8 +40,28 @@
             <input type="text" id="playlist_name_graphics"> <br> 
             <button class='submit' onclick='graphics_recom()'>SUBMIT</button>
         </div>
+
+        <button class="options" id="would_like" onclick="show_hide_form(`would_like_form`)"> WOULD I LIKE THIS SONG? </button>
+        <div id="would_form" class="form">
+            <label for="track_name_would"> Playlist Name </label> <br> 
+            <input type="text" id="track_name_would"> <br> 
+            <button class='submit' onclick='would_like()'>SUBMIT</button>
+        </div>
+
+        <button class="options" id="basic_rec" onclick="show_hide_form(`basic_form`)"> ARTISTS RECOMMENDER </button>
+        
+        <div id="basic_form" class="form">
+            <label for="artist_name" > Artists Names </label> <br> 
+            <input type="text" id="artist_name" placeholder="(ex: artist1, artist2 ...)"> <br> 
+            <label for="playlist_name_basic"> Playlist Name </label> <br> 
+            <input type="text" id="playlist_name_basic"> <br> 
+            <button class='submit' onclick='basic_recom()'>SUBMIT</button>
+        </div>
     </div>
     
+
+
+
     <div id="response">
     
     </div>
