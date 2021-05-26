@@ -42,16 +42,6 @@ function ajax_request_jquery(element, params, input_data) {
     });
 }
 
-function request_hello_world() {
-    $.ajax({
-        type: 'POST',
-        contentType: "application/json", 
-        url: server_url + '?token=' + Token, 
-        data: JSON.stringify({Names: 'Bad Bunny'}),
-        success: function(data) { alert(data); }
-    });
-}
-
 function authorization(){
     params = 'client_id='+clientID+'&response_type=token&redirect_uri='+webUrl;
     scopes = '&scope=playlist-modify-public user-top-read playlist-modify-private playlist-read-private user-follow-read user-top-read';
