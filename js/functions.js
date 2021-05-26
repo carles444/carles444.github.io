@@ -108,6 +108,7 @@ function complete_recom(){
 
 function clear_response(){
     document.getElementById('response').innerHTML = '';
+    document.getElementById('clear_button').style.display = 'none';
 }
 
 function show_hide_form(content_id){
