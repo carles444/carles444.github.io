@@ -27,6 +27,9 @@ function init(){
         document.getElementById('personal_rec').style.display = 'none'
 
     }
+    if(document.getElementById('response').innerHTML != ''){
+        document.getElementById('clear_button').style.display = 'none'
+    }
 }
 
 
@@ -60,6 +63,8 @@ function authorization(){
 function request_option(option_name, input_data){
     params = '?token='+Token+'&option='+option_name;
     ajax_request_jquery('response', params, input_data);
+    document.getElementById('clear_button').style.display = 'block';
+
 }
 
 
