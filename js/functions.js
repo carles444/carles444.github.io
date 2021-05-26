@@ -54,7 +54,7 @@ function request_hello_world() {
 
 function authorization(){
     params = 'client_id='+clientID+'&response_type=token&redirect_uri='+webUrl;
-    scopes = '&scope=playlist-modify-public user-top-read playlist-modify-private playlist-read-private';
+    scopes = '&scope=playlist-modify-public user-top-read playlist-modify-private playlist-read-private user-follow-read user-top-read';
     window.location.href = 'https://accounts.spotify.com/authorize?'+params+scopes;
     console.log(params+scopes);
 
