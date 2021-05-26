@@ -48,7 +48,7 @@
             <button class='submit' onclick='would_like()'>SUBMIT</button>
         </div>
 
-        <button class="options" id="basic_rec" onclick="show_hide_form(`basic_form`)"> ARTISTS RECOMMENDER </button>
+        <button class="options" id="basic_rec" onclick="show_hide_form(`basic_form`)"> ARTISTS' SONGS RECOMMENDER </button>
         
         <div id="basic_form" class="form">
             <label for="artist_name" > Artists Names </label> <br> 
@@ -56,6 +56,14 @@
             <label for="playlist_name_basic"> Playlist Name </label> <br> 
             <input type="text" id="playlist_name_basic"> <br> 
             <button class='submit' onclick='basic_recom()'>CREATE PLAYLIST</button>
+        </div>
+
+        <button class="options" id="personal_rec" onclick="show_hide_form(`personal_form`)"> PERSONAL RECOMMENDER </button>
+        
+        <div id="personal_form" class="form"> 
+            <label for="playlist_name_personal"> Playlist Name </label> <br> 
+            <input type="text" id="playlist_name_personal"> <br> 
+            <button class='submit' onclick='personal_recom()'>CREATE PLAYLIST</button>
         </div>
     </div>
     

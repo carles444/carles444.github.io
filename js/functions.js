@@ -15,6 +15,8 @@ function init(){
         document.getElementById('artists_rec').style.display = 'block'
         document.getElementById('complete_rec').style.display = 'block'
         document.getElementById('would_like_rec').style.display = 'block'
+        document.getElementById('personal_rec').style.display = 'block'
+
 
     } else{
         document.getElementById('auth_but').textContent = 'GET ACCESS'
@@ -22,6 +24,8 @@ function init(){
         document.getElementById('artists_rec').style.display = 'none'
         document.getElementById('complete_rec').style.display = 'none'
         document.getElementById('would_like_rec').style.display = 'none'
+        document.getElementById('personal_rec').style.display = 'none'
+
     }
 }
 
@@ -79,6 +83,13 @@ function graphics_recom(){
     json_input = JSON.stringify({'playlist_name': playlist_name});
     request_option('graphics', json_input);
     show_hide_form('graphics_form');
+}
+
+function personal_recom(){
+    playlist_name = document.getElementById('playlist_name_personal').value;
+    json_input = JSON.stringify({'playlist_name': playlist_name});
+    request_option('personal', json_input);
+    show_hide_form('personal_form');
 }
 
 function complete_recom(){
