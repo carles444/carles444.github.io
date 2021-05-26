@@ -17,11 +17,11 @@
         <title id="page_title" style="grid-area:layout_title" href='https://carles444.github.io/'>RecoMusic</title>
         <button class="options" id="auth_but"  onclick="authorization()"> GET ACCESS </button> 
         
-        <button class="options" id="basic_rec" onclick="show_hide_form(`complete_form`)"> BASIC RECOMMENDER </button>
+        <button class="options" id="complete_rec" onclick="show_hide_form(`complete_form`)"> BASIC RECOMMENDER </button>
         
         <div id="complete_form" class="form">
             <label for="option_complete">Choose an option:</label>
-            <select name="cars" id="cars">
+            <select name="complete_select" id="complete_select">
                 <option value="genre">Genre</option>
                 <option value="artists">Artists</option>
                 <option value="songs">Songs</option>
@@ -41,7 +41,7 @@
             <button class='submit' onclick='graphics_recom()'>SUBMIT</button>
         </div>
 
-        <button class="options" id="would_like" onclick="show_hide_form(`would_like_form`)"> WOULD I LIKE THIS SONG? </button>
+        <button class="options" id="would_like_rec" onclick="show_hide_form(`would_like_form`)"> WOULD I LIKE THIS SONG? </button>
         <div id="would_form" class="form">
             <label for="track_name_would"> Playlist Name </label> <br> 
             <input type="text" id="track_name_would"> <br> 
