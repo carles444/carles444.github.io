@@ -13,11 +13,15 @@ function init(){
         document.getElementById('auth_but').textContent = 'REFRESH SESSION'
         document.getElementById('basic_rec').style.display = 'block'
         document.getElementById('artists_rec').style.display = 'block'
+        document.getElementById('complete_rec').style.display = 'block'
+        document.getElementById('would_like_rec').style.display = 'block'
 
     } else{
         document.getElementById('auth_but').textContent = 'GET ACCESS'
         document.getElementById('basic_rec').style.display = 'none'
         document.getElementById('artists_rec').style.display = 'none'
+        document.getElementById('complete_rec').style.display = 'none'
+        document.getElementById('would_like_rec').style.display = 'none'
     }
 }
 
